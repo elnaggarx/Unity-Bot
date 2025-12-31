@@ -1,26 +1,138 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif; /* To be changed */
+}
+.main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f9f3f3;
+}
+.side-bar {
+    height: 100vh;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding: 2.68rem 0 2rem 0;
+    justify-content: space-between;
+}
+.side-bar-header{
+    padding: 0 1.5rem
+}
+.unity-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+.unity-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.new-chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border-radius: 70px;
+    width: 100%;
+    padding: 0.8rem 0;
+    border: none;
+    background-color: #164e41;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.new-chat-button:hover {
+    background-color: #0e362f;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}   
+
+.new-chat-button p{
+    color:white;
+    font-size: 1rem;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.recent-chats {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.recent-chats-header{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.recent-chats-header-text{
+    color: #6A6969;
+}
+.clear-all{
+    color: #5661F6;
+}
+
+.recent-chat-item{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+}
+
+.recent-chat-item-title{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    color: #757575;
+}
+
+.recent-chats-list > :nth-child(n+2){
+    margin-top: 0.5rem;
+}
+.recent-chat-item:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all ease-in-out 0.3s;
+}
+.side-bar-bottom{
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-button{
+    width: 100%;
+    border: 2px solid #cecdcd;
+    padding: 0.5rem 0.5rem;
+    border-radius: 69px;
+    display: flex;
+    align-items: center;
+    color: #757575;
+}
+.settings-logo-container{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #164e41;
+    border-radius: 50%;
+    margin-right: 0.3rem;
 }
