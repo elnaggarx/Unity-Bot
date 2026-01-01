@@ -1,8 +1,10 @@
-import React from 'react'
+import Message from "./message"
 
 const Chat = () => {
   return (
-    <div className='chat'>Chat</div>
+    <div className='chat'>
+        <Message></Message>
+    </div>
   )
 }
 
