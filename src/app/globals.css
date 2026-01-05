@@ -25,6 +25,9 @@ body{
     align-items: center;    
     padding: 2.68rem 0 2rem 0;
     justify-content: space-between;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
 }
 .side-bar-header{
     padding: 0 1.5rem
@@ -138,8 +141,39 @@ body{
 }
 
 .chat{
-    padding: 3.375rem 5.188rem 5.6rem 1.5rem;
-    width: 80%; 
+    flex:1;
+    position: relative;
+    overflow-y:auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    
+    
+}
+
+
+.chat::-webkit-scrollbar {
+  width: 0;
+}
+
+.chat:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat:hover::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.4);
+  border-radius: 4px;
+}
+
+
+.chat-prompt-container{
+    padding: 3.375rem 5.188rem 1rem 1.5rem;
+    width: 80%;
+    background-color: #f9f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .message{
@@ -177,4 +211,47 @@ body{
     font-size: 28px;
     line-height: 1.5rem;
     color:#164e41;
+}
+
+.prompt-bar{
+    position: sticky;
+    bottom:1rem;
+    width: 100%;
+    left:0;
+}
+
+.prompt-bar-inner{
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height:100px;
+}
+
+.prompt-input-contianer{
+    display: flex;
+    flex:1;
+
+}
+
+.prompt-input{
+    border:none;
+    outline:none;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.send-button{
+    background-color: #164e41;
+    border:none;
+    border-radius: 50%;
+    padding: 0.75rem;
+    color:white;
+    font-size: 1rem;
 }
