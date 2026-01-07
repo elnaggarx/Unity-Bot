@@ -1,11 +1,5 @@
-import Sidebar from "@/app/components/sidebar";
-import Chat from "@/app/components/chat";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className="main">
-      <Sidebar />
-      <Chat/>
-    </div>
-  );
+  redirect("/register");
 }

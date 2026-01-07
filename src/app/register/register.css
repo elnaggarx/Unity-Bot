@@ -1,0 +1,191 @@
+/* Simple 50/50 split layout (plain CSS) */
+.splitContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 2rem 3rem;
+}
+
+.leftImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 2.5rem;
+}
+
+.inner {
+  max-width: 36rem;
+}
+
+.organization-logos {
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  display: flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.collab-organization-logo-unity{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+.collab-organization-logo-ieee{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.welcome-title{
+  font-weight: 700;
+  color: #334155;
+  font-size: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.description {
+  color: #475569;
+  margin-bottom: 3rem;
+  font-size: 20px;
+  text-align: center ;
+
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background: #164e41;
+  color: #ffffff;
+  padding: 1.4rem 5.688rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: blue;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 767px) {
+  .splitContainer {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .leftImage {
+    height: 40vh;
+  }
+
+  .right {
+    padding: 1.5rem;
+  }
+}
+
+/* Form styles (used by signup/login) */
+.form {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e6e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 0 0 4px rgba(22,78,65,0.08);
+  border-color: #164e41;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.submitBtn {
+  background: #164e41;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: #475569;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.inline-link {
+  color: #164e41;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+
+.form-note {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 0.95rem;
+}
+
+.success {
+  color: #064e3b;
+  font-size: 0.95rem;
+}
